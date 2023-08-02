@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 overrides:
   axios: next
 
@@ -48,7 +52,7 @@ dependencies:
     version: 9.1.4(@nestjs/common@9.4.2)(@nestjs/websockets@9.1.2)(rxjs@7.5.7)
   '@nestjs/sequelize':
     specifier: ^9.0.0
-    version: 9.0.0(@nestjs/common@9.4.2)(@nestjs/core@9.4.2)(reflect-metadata@0.1.13)(rxjs@7.5.7)(sequelize-typescript@2.1.3)(sequelize@6.24.0)
+    version: 9.0.0(@nestjs/common@9.4.2)(@nestjs/core@9.4.2)(reflect-metadata@0.1.13)(rxjs@7.5.7)(sequelize-typescript@2.1.3)(sequelize@6.29.0)
   '@nestjs/serve-static':
     specifier: ^3.0.0
     version: 3.0.0(@nestjs/common@9.4.2)(@nestjs/core@9.4.2)
@@ -107,11 +111,11 @@ dependencies:
     specifier: ^7.5.7
     version: 7.5.7
   sequelize:
-    specifier: ^6.11.0
-    version: 6.24.0(mysql2@2.3.3)(pg@8.8.0)
+    specifier: ^6.29.0
+    version: 6.29.0(mysql2@2.3.3)(pg@8.8.0)
   sequelize-typescript:
     specifier: ^2.1.3
-    version: 2.1.3(@types/node@18.11.0)(@types/validator@13.7.7)(reflect-metadata@0.1.13)(sequelize@6.24.0)
+    version: 2.1.3(@types/node@18.11.0)(@types/validator@13.7.7)(reflect-metadata@0.1.13)(sequelize@6.29.0)
   socket.io-client:
     specifier: ^4.4.0
     version: 4.5.2
@@ -276,22 +280,6 @@ packages:
       source-map: 0.7.4
     dev: true
 
-  /@angular-devkit/core@16.0.1:
-    resolution: {integrity: sha512-2uz98IqkKJlgnHbWQ7VeL4pb+snGAZXIama2KXi+k9GsRntdcw+udX8rL3G9SdUGUF+m6+147Y1oRBMHsO/v4w==}
-    engines: {node: ^16.14.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
-    peerDependencies:
-      chokidar: ^3.5.2
-    peerDependenciesMeta:
-      chokidar:
-        optional: true
-    dependencies:
-      ajv: 8.12.0
-      ajv-formats: 2.1.1(ajv@8.12.0)
-      jsonc-parser: 3.2.0
-      rxjs: 7.8.1
-      source-map: 0.7.4
-    dev: true
-
   /@angular-devkit/core@16.0.1(chokidar@3.5.3):
     resolution: {integrity: sha512-2uz98IqkKJlgnHbWQ7VeL4pb+snGAZXIama2KXi+k9GsRntdcw+udX8rL3G9SdUGUF+m6+147Y1oRBMHsO/v4w==}
     engines: {node: ^16.14.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -333,19 +321,6 @@ packages:
       magic-string: 0.26.2
       ora: 5.4.1
       rxjs: 6.6.7
-    transitivePeerDependencies:
-      - chokidar
-    dev: true
-
-  /@angular-devkit/schematics@16.0.1:
-    resolution: {integrity: sha512-A9D0LTYmiqiBa90GKcSuWb7hUouGIbm/AHbJbjL85WLLRbQA2PwKl7P5Mpd6nS/ZC0kfG4VQY3VOaDvb3qpI9g==}
-    engines: {node: ^16.14.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
-    dependencies:
-      '@angular-devkit/core': 16.0.1
-      jsonc-parser: 3.2.0
-      magic-string: 0.30.0
-      ora: 5.4.1
-      rxjs: 7.8.1
     transitivePeerDependencies:
       - chokidar
     dev: true
@@ -3202,8 +3177,8 @@ packages:
     peerDependencies:
       typescript: '>=4.3.5'
     dependencies:
-      '@angular-devkit/core': 16.0.1
-      '@angular-devkit/schematics': 16.0.1
+      '@angular-devkit/core': 16.0.1(chokidar@3.5.3)
+      '@angular-devkit/schematics': 16.0.1(chokidar@3.5.3)
       jsonc-parser: 3.2.0
       pluralize: 8.0.0
       typescript: 5.0.4
@@ -3211,7 +3186,7 @@ packages:
       - chokidar
     dev: true
 
-  /@nestjs/sequelize@9.0.0(@nestjs/common@9.4.2)(@nestjs/core@9.4.2)(reflect-metadata@0.1.13)(rxjs@7.5.7)(sequelize-typescript@2.1.3)(sequelize@6.24.0):
+  /@nestjs/sequelize@9.0.0(@nestjs/common@9.4.2)(@nestjs/core@9.4.2)(reflect-metadata@0.1.13)(rxjs@7.5.7)(sequelize-typescript@2.1.3)(sequelize@6.29.0):
     resolution: {integrity: sha512-8HwEcDuUka5sGR4eIv98tEWRTzNI87KGkoHLbmFx9rk1/OB3nF2gqvtLzU7WMLdgan0mNQdDzeBoVwAmedMEtQ==}
     peerDependencies:
       '@nestjs/common': ^8.0.0 || ^9.0.0
@@ -3225,8 +3200,8 @@ packages:
       '@nestjs/core': 9.4.2(@nestjs/common@9.4.2)(@nestjs/microservices@9.1.4)(@nestjs/platform-express@9.4.2)(@nestjs/websockets@9.1.2)(reflect-metadata@0.1.13)(rxjs@7.5.7)
       reflect-metadata: 0.1.13
       rxjs: 7.5.7
-      sequelize: 6.24.0(mysql2@2.3.3)(pg@8.8.0)
-      sequelize-typescript: 2.1.3(@types/node@18.11.0)(@types/validator@13.7.7)(reflect-metadata@0.1.13)(sequelize@6.24.0)
+      sequelize: 6.29.0(mysql2@2.3.3)(pg@8.8.0)
+      sequelize-typescript: 2.1.3(@types/node@18.11.0)(@types/validator@13.7.7)(reflect-metadata@0.1.13)(sequelize@6.29.0)
       uuid: 8.3.2
     dev: false
 
@@ -3330,6 +3305,7 @@ packages:
     dependencies:
       '@nx/eslint-plugin': 16.3.1(@typescript-eslint/parser@5.39.0)(eslint-config-prettier@8.5.0)(eslint@8.24.0)(nx@16.3.1)(typescript@5.0.4)
     transitivePeerDependencies:
+      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@typescript-eslint/parser'
@@ -3347,6 +3323,7 @@ packages:
     dependencies:
       '@nx/jest': 16.3.1(@types/node@18.11.0)(nx@16.3.1)(ts-node@10.9.1)(typescript@5.0.4)
     transitivePeerDependencies:
+      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@types/node'
@@ -3364,6 +3341,7 @@ packages:
     dependencies:
       '@nx/js': 16.3.1(nx@16.3.1)(typescript@5.0.4)
     transitivePeerDependencies:
+      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - debug
@@ -3378,6 +3356,7 @@ packages:
     dependencies:
       '@nx/linter': 16.3.1(eslint@8.24.0)(nx@16.3.1)(typescript@5.0.4)
     transitivePeerDependencies:
+      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - debug
@@ -3393,6 +3372,7 @@ packages:
     dependencies:
       '@nx/nest': 16.3.1(@types/node@18.11.0)(eslint@8.24.0)(nx@16.3.1)(ts-node@10.9.1)(typescript@5.0.4)
     transitivePeerDependencies:
+      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@types/node'
@@ -3412,6 +3392,7 @@ packages:
     dependencies:
       '@nx/node': 16.3.1(@types/node@18.11.0)(eslint@8.24.0)(nx@16.3.1)(ts-node@10.9.1)(typescript@5.0.4)
     transitivePeerDependencies:
+      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@types/node'
@@ -3491,6 +3472,7 @@ packages:
       eslint-config-prettier: 8.5.0(eslint@8.24.0)
       semver: 7.3.4
     transitivePeerDependencies:
+      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - debug
@@ -3519,6 +3501,7 @@ packages:
       resolve.exports: 1.1.0
       tslib: 2.5.2
     transitivePeerDependencies:
+      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@types/node'
@@ -3552,7 +3535,7 @@ packages:
       '@phenomnomnominal/tsquery': 5.0.1(typescript@5.0.4)
       babel-plugin-const-enum: 1.2.0(@babel/core@7.19.3)
       babel-plugin-macros: 2.8.0
-      babel-plugin-transform-typescript-metadata: 0.3.2
+      babel-plugin-transform-typescript-metadata: 0.3.2(@babel/core@7.19.3)
       chalk: 4.1.2
       fast-glob: 3.2.7
       fs-extra: 11.1.0
@@ -3562,6 +3545,7 @@ packages:
       source-map-support: 0.5.19
       tslib: 2.5.2
     transitivePeerDependencies:
+      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - debug
@@ -3586,6 +3570,7 @@ packages:
       tmp: 0.2.1
       tslib: 2.5.2
     transitivePeerDependencies:
+      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - debug
@@ -3606,6 +3591,7 @@ packages:
       '@nx/node': 16.3.1(@types/node@18.11.0)(eslint@8.24.0)(nx@16.3.1)(ts-node@10.9.1)(typescript@5.0.4)
       enquirer: 2.3.6
     transitivePeerDependencies:
+      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@types/node'
@@ -3631,6 +3617,7 @@ packages:
       '@nx/workspace': 16.3.1
       tslib: 2.5.2
     transitivePeerDependencies:
+      - '@babel/traverse'
       - '@swc-node/register'
       - '@swc/core'
       - '@types/node'
@@ -5016,9 +5003,16 @@ packages:
     resolution: {integrity: sha512-Xj9XuRuz3nTSbaTXWv3itLOcxyF4oPD8douBBmj7U9BBC6nEBYfyOJYQMf/8PJAFotC62UY5dFfIGEPr7WswzQ==}
     dev: false
 
-  /babel-plugin-transform-typescript-metadata@0.3.2:
+  /babel-plugin-transform-typescript-metadata@0.3.2(@babel/core@7.19.3):
     resolution: {integrity: sha512-mWEvCQTgXQf48yDqgN7CH50waTyYBeP2Lpqx4nNWab9sxEpdXVeKgfj1qYI2/TgUPQtNFZ85i3PemRtnXVYYJg==}
+    peerDependencies:
+      '@babel/core': ^7
+      '@babel/traverse': ^7
+    peerDependenciesMeta:
+      '@babel/traverse':
+        optional: true
     dependencies:
+      '@babel/core': 7.19.3
       '@babel/helper-plugin-utils': 7.20.2
     dev: true
 
@@ -9432,8 +9426,8 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
-  /retry-as-promised@6.1.0:
-    resolution: {integrity: sha512-Hj/jY+wFC+SB9SDlIIFWiGOHnNG0swYbGYsOj2BJ8u2HKUaobNKab0OIC0zOLYzDy0mb7A4xA5BMo4LMz5YtEA==}
+  /retry-as-promised@7.0.4:
+    resolution: {integrity: sha512-XgmCoxKWkDofwH8WddD0w85ZfqYz+ZHlr5yo+3YUCfycWawU56T5ckWXsScsj5B8tqUcIG67DxXByo3VUgiAdA==}
     dev: false
 
   /retry@0.13.1:
@@ -9593,7 +9587,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: false
 
-  /sequelize-typescript@2.1.3(@types/node@18.11.0)(@types/validator@13.7.7)(reflect-metadata@0.1.13)(sequelize@6.24.0):
+  /sequelize-typescript@2.1.3(@types/node@18.11.0)(@types/validator@13.7.7)(reflect-metadata@0.1.13)(sequelize@6.29.0):
     resolution: {integrity: sha512-0mejGAaLywuCoOOLSXCQs2sMBNudU/QtWZkGY5VT2dfTHToXZi5bOxCa3/CukNNk7wJwXnLuIdeHdlqjvVoj1g==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
@@ -9606,11 +9600,11 @@ packages:
       '@types/validator': 13.7.7
       glob: 7.2.0
       reflect-metadata: 0.1.13
-      sequelize: 6.24.0(mysql2@2.3.3)(pg@8.8.0)
+      sequelize: 6.29.0(mysql2@2.3.3)(pg@8.8.0)
     dev: false
 
-  /sequelize@6.24.0(mysql2@2.3.3)(pg@8.8.0):
-    resolution: {integrity: sha512-mPo7Q7gWkrsstjR2aw8ahkrj8RUJCozz3kedAz2B5ZIdLoQEH1z2tvaeJONI8R6RqeuyRQosx9Yn3s9yQyo6lQ==}
+  /sequelize@6.29.0(mysql2@2.3.3)(pg@8.8.0):
+    resolution: {integrity: sha512-m8Wi90rs3NZP9coXE52c7PL4Q078nwYZXqt1IxPvgki7nOFn0p/F0eKsYDBXCPw9G8/BCEa6zZNk0DQUAT4ypA==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       ibm_db: '*'
@@ -9653,7 +9647,7 @@ packages:
       mysql2: 2.3.3
       pg: 8.8.0
       pg-connection-string: 2.5.0
-      retry-as-promised: 6.1.0
+      retry-as-promised: 7.0.4
       semver: 7.3.8
       sequelize-pool: 7.1.0
       toposort-class: 1.0.1
