@@ -70,7 +70,7 @@
     "graphql": "15.8.0",
     "graphql-tools": "7.0.4",
     "hbs": "^4.2.0",
-    "mongoose": "^6.6.5",
+    "mongoose": "^6.11.3",
     "mysql2": "^2.3.3",
     "pg": "^8.8.0",
     "redis": "^3.0.2",
